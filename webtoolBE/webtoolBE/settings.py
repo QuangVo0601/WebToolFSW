@@ -57,10 +57,11 @@ MIDDLEWARE = [
 ]
 
 # Cross Origin Control Access
+# Enable sended data from Front End
 CORS_ORIGIN_WHITELIST = [
     "https://example.com",
     "https://sub.example.com",
-    "http://localhost:3000",
+    "http://localhost:3000", # This is Front End server
     "http://127.0.0.1:9000"
 ]
 ROOT_URLCONF = 'webtoolBE.urls'
