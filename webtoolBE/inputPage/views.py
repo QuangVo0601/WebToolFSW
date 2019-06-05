@@ -4,14 +4,14 @@ from rest_framework.parsers import JSONParser
 from .models import Input
 from .serializers import InputSerializer
 
-# Create your views here.
+# Create Django API views here.
 def index_page(request):
-    return HttpResponse("<h1>Server is running correctly</h1>") # Provide initial route 
+    return HttpResponse("<h1>Server is running correctly</h1>") # Provide initial route for testing
 
 @csrf_exempt
 def input_list(request):
     """
-    List all code input, or create a new input obj.
+    List all code inputs, or create a new input obj.
     """
     if request.method == 'GET': # Back End send, Front End request
         inputs = Input.objects.all()
@@ -48,7 +48,7 @@ def input_detail(request, pk):
             return JsonResponse(serializer.data)
         return JsonResponse(serializer.errors, status=400)
 
-    elif request.method == 'DELETE': 
+    elif request.method == 'DELETE': # delete data
         input.delete()
         return HttpResponse(status=204)
 
