@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.urls import path, include
 
+# webtoolBE/urls.py
+# Wire up the root urlconf to include our inputPage app's URLs
 urlpatterns = [
     path('', include('inputPage.urls')),
 ]

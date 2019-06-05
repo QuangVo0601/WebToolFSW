@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'inputPage',
-    'corsheaders'
+    'rest_framework', # newly added app
+    'inputPage', # newly added app
+    'corsheaders' # newly added
 ]
 
 MIDDLEWARE = [
